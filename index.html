@@ -1,1 +1,20 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Minesweeper</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="bomb.png" type="image" />
+</head>
+<body id="body" oncontextmenu="return false;" onmousedown="where(event)">
+    <div class="box-1">
+    <h1>Dynamic Minesweeper
+        <button id="size" onclick="size()" class="navbar" type="button">Change Size</button>
+        <button id="reset" onclick="reset()" class="navbar" type="button">Clear</button>
+    </h1>
+    </div>
+<script src="main.js"></script>
+    <h2 id="Over" style="display:none;">Game Over</h2>
+    <button id="Over2" style="display:none;" class="GameOver" onclick="reset()">Try Again</button>
+    <h3 id="winScreen" style="display:none;">You Win!</h3>
+</body>
+</html>
