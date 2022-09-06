@@ -1,0 +1,90 @@
+body{
+    background-color:#5cc4ec;
+    color:#555555;
+    font: normal 0px Arial;
+    
+    line-height:1.6em;
+    margin:0;
+    text-align: center;
+    white-space: nowrap;
+    }
+    .box-1{
+        font: normal 14px Arial;
+        background-color:#333;
+        color:#fff;
+        border-bottom:5px black solid;
+        margin:0px;
+        width: 100%;
+        text-align:left;
+        /* border-right:5px black solid; */
+    }
+    .box-1 h1{
+        height: 40px;
+        font-family:Tahoma;
+        letter-spacing:0.2em;
+        margin: 0;
+        padding: 0px 15px;
+        padding-top: 4px;
+        text-align:left
+    }
+    .navbar{
+        vertical-align: top;
+        font: bold 16px Arial;
+        color: rgb(173, 171, 171);
+        padding-top: 12px;
+        padding-left: 30px;
+        margin: 0px;
+        border: 0px;
+        background-color: transparent;
+        text-align:left
+    }
+    .navbar:hover{
+        color: grey;
+    }
+    a{
+        vertical-align: top;
+        display:inline-block;
+        height: 40px;
+        width: 40px;
+        font: normal 20px Arial;
+        background-color:rgb(87, 214, 61);
+        text-align: center;
+        line-height: 40px;
+        background-size: contain;
+    }
+    b{
+        vertical-align: top;
+        display:inline-block;
+        height: 40px;
+        width: 40px;
+        font: normal 20px Arial;
+        text-align: center;
+        line-height: 40px;
+        background-color: rgb(64, 160, 45);
+        background-size: contain;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+    h2{
+        -webkit-text-stroke: 1px red;
+        font: bold 30px Tahoma;
+        color: black;
+        position: absolute;
+        top: 40%;
+        left: 45.4%;
+    }
+    .GameOver{
+        position: absolute;
+        top: 48%;
+        left: 48.2%;
+        background-color: aquamarine;
+    }
+    h3{
+        -webkit-text-stroke: 1px greenyellow;
+        font: bold 30px Tahoma;
+        color: black;
+        position: absolute;
+        top: 40%;
+        left: 46.5%;
+    }
