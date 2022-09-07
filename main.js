@@ -3,6 +3,7 @@ var winCounter = 0;
 var h = 22;
 var w = 48;
 //h = 22   and   w = 48
+var bomb = Math.floor(h * w / 8);
 var board = Array(h);
 for (var i = 0; i < h; i++) {
     board[i] = Array(w).fill(0);
@@ -65,10 +66,13 @@ function where(e) {
 //Main method
 function change(r,c) {
     if(origin == 0){
-        if(h == 3 && w == 3 && r == 1 && c == 1){
+        if(h * w <= bomb){
+            return lose();
+        }
+        if(h * w - 9 < bomb){
             return win();
         }
-        for(var i = 0; i < Math.floor(h * w / 8); i++){
+        for(var i = 0; i < bomb; i++){
             var x = Math.floor(Math.random() * h);
             var y = Math.floor(Math.random() * w);
             if(board[x][y] >= 10){
@@ -113,7 +117,7 @@ function change(r,c) {
             lose();
         }else{
             winCounter++;
-            if(Math.floor(h * w / 8) + winCounter == h * w){
+            if(bomb + winCounter == h * w){
                 win();
             }
             document.getElementById(r + "-" + c).className = 'visited';
@@ -156,6 +160,7 @@ function change(r,c) {
     function size() {
         h = parseInt(prompt("Enter the height(Default == 22)", "height"));
         w = parseInt(prompt("Enter the width(Default == 48)", "width"));
+        bomb = Math.floor(h * w / 8);
         reset();
     }
 //Changes size
@@ -215,9 +220,7 @@ function change(r,c) {
         document.getElementById('Over2').style.display = 'block';
     }
 
-
-
-
-//Random:
-//const myForm = document.querySelector('#my-form');
-//addEventListener('click', onSubmit);
+function bombs(){
+    bomb = parseInt(prompt("Enter the number of bombs(Default == " + Math.floor(h * w / 8) + ")", "bombs"));
+    reset();
+}
